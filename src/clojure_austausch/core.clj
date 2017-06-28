@@ -3,6 +3,11 @@
   (:require
    [schema.core :as s]))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                                        ; Code examples and threading macros.                                                                       ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (def convention-config
   {:required-key s/Str
    (s/optional-key :key-with-default) s/Str
@@ -45,6 +50,15 @@
 
 ;; Threre are more threading-macros, but the basic concept remains the same so we can omit them.
 ;; For further reading on threading-macros: https://clojure.org/guides/threading_macros
+
+;; Discussion do you find threading macros useful? Should we use them more often?
+;; Do you find them more readable/easier to understand the code with them or nested functions?
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                                        ;       Visitor and multimethods      ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Visitor pattern
 ;; https://en.wikipedia.org/wiki/Visitor_pattern
@@ -109,3 +123,7 @@
 (defmethod type-dispatch [java.lang.Long java.lang.Long]
   [x y]
   "arg is Long Long")
+
+;;Discussion: What do you think of multimethods? Are they useful? Are they useful for us and our codebase?
+;; Where do we use them already? Why do we use them?
+

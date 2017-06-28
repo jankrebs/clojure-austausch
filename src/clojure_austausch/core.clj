@@ -3,7 +3,6 @@
   (:require
    [schema.core :as s]))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ; Code examples and threading macros.                                                                       ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -99,9 +98,6 @@
 (defmethod create-stack-config "webserver"
   [convention-config]
   (create-webserver-stack-config convention-config))
-
-
-
 
 ;; This simple system is extremely powerful. One way to understand the relationship between Clojure
 ;; multimethods and traditional Java-style single dispatch is that single dispatch is like a Clojure

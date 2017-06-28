@@ -14,6 +14,7 @@
 (def stack-config
   {:required-key s/Str
    :key-with-default s/Str
+   :key-with-default-2 s/Str
    (s/optional-key :optional-key) s/Str
    })
 
